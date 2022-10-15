@@ -35,7 +35,10 @@ node{
 		//  do nothing if there is an exception
 	}
    stage('Aravinth Docker deployment'){
-   sh 'docker run -itd -p "8090:8080" --name tomcattest -v "/opt/tomcatsync/syc:/usr/local/tomcat/syc" jjaba/myweb:0.0.2' 
+   sh 'docker run -itd -p "8090:8080" --name tomcattest -v "/opt/tomcatsync/syc:/usr/local/tomcat/syc" jjaba/myweb:0.0.2'
    }
 }
+	stage ('Aravinth File Transfer'){
+	 sh 'sshpass -f  "/opt/tomcatsync/pass" scp -r Dockerfile ec2-user@ubuntuwebserver.local:/opt/tomcatsync/'
+	 }
 }
