@@ -1,6 +1,6 @@
 node{
    stage('Aravinth SCM Checkout'){
-     git 'https://github.com/aravinth34/my-app.git'
+     git 'https://github.com/aravinth34/Aravinth.git'
    }
    stage('Aravinth Compile-Package'){
 
