@@ -39,6 +39,6 @@ node{
    }
 }
 	stage ('Aravinth File Transfer'){
-	 sh 'sshpass -f  "/opt/tomcatsync/pass" scp -r Dockerfile ec2-user@ubuntuwebserver.local:/opt/tomcatsync/'
+	 sh "sshpass -f  '/opt/tomcatsync/pass' scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r Dockerfile ec2-user@ubuntuwebserver.local:/opt/tomcatsync/"
 	 }
 }
