@@ -1,6 +1,6 @@
 node{
    stage('Aravinth SCM Checkout'){
-     git 'https://github.com/aravinth34/Aravinth.git'
+     git 'https://github.com/maravinth10/website_old.git'
    }
    stage('Aravinth Compile-Package'){
       def mvnHome =  tool name: 'maven3', type: 'maven'   
