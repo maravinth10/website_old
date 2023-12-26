@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  tomcat:
+    image: jjaba/myweb:0.0.2
+    container_name: ara_tomcat
+    volumes:
+       - /home/ec2-user/sync:/usr/local/tomcat/webapps/sync
+    ports:
+      - "80:8080"
