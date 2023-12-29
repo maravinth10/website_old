@@ -1,9 +1,8 @@
-ersion: "2"
+version: "2"
 
 services:
   tomcat:
-    build:
-      dockerfile: dockerfile
+    image: jjaba/myweb:0.0.2
     container_name: ara_tomcat
     deploy:
       replicas: 1
