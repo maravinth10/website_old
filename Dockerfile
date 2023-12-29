@@ -1,3 +1,4 @@
-FROM tomcat:8
+FROM jjaba/myweb:0.0.2
 # Take the war and copy to webapps of tomcat
-COPY target/newapp.war /usr/local/tomcat/webapps/
+COPY newapp.war /usr/local/tomcat/webapps/
+EXPOSE 80
